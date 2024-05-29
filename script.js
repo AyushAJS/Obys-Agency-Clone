@@ -29,54 +29,54 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 }
 
-// Loader
-
 var tl = gsap.timeline()
-tl.from(".line h1",{
-     y: 150,
-     stagger: 0.2,
-     duration: 0.5,
-     delay: 0.2
-})   
-tl.from("#line1-prt1, .line h2",{
-    opacity: 0,
-    onStart: function(){
-        var counter = document.querySelector("#line1-prt1 h5")
-        var grow = 0
-        var interval = setInterval(()=>{
-        grow += 1;
-        if(grow === 100){
-            clearInterval(interval);
+
+// Loader
+function loadingAnimation(){
+    tl.from(".line h1",{
+         y: 150,
+         stagger: 0.2,
+         duration: 0.5,
+         delay: 0.2
+    })   
+    tl.from("#line1-prt1, .line h2",{
+        opacity: 0,
+        onStart: function(){
+            var counter = document.querySelector("#line1-prt1 h5")
+            var grow = 0
+            var interval = setInterval(()=>{
+            grow += 1;
+            if(grow === 100){
+                clearInterval(interval);
+            }
+            counter.textContent = grow;
+            console.log(grow)
+            },30)    
         }
-        counter.textContent = grow;
-        console.log(grow)
-        },30)    
-    }
+    })
+    tl.to("#loader", {
+        opacity: 0,
+        duration: 0.2,
+        delay: 3.5
+    })
+    tl.from("#page1",{
+        delay: 0.2,
+        y:1200,
+        opacity: 0,
+        ease: Power4 
+    })
+    tl.to("#loader",{
+        display: "none"
+    })   
+}
+//  Page 1 Content
+tl.from(".heroContainer #heroNumPart h3,#heroBox #hero1 h1,#heroBox #hero2 h1,#heroBox #hero3 h1,#heroBox #hero4 h1",{
+  y:100,
+  opacity: 0,
+  stagger: 0.1,
+  duration: 0.5,
 })
-tl.to("#loader", {
-    opacity: 0,
-    duration: 0.2,
-    delay: 3.5
-})
-tl.from("#page1",{
-    delay: 0.2,
-    y:1200,
-    opacity: 0,
-    ease: Power4 
-})
-tl.to("#loader",{
-    display: "none"
-}) 
 
 
 
-
- 
-
-
-
-
-
-
-
-
+// loadingAnimation();
