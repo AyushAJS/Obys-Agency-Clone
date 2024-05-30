@@ -9,7 +9,23 @@ html,body{
     height: 100%;
     width: 100%;
     background-color: #0B0B0B;
+    cursor: none;
 }
+body::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+#cursor{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.461);
+    filter: drop-shadow(2px 2px 2px rgb(174, 174, 174));
+    position: fixed;
+    z-index: 9990;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+}
+
 #loader{
     height: 100%;
     width: 100%;
@@ -74,7 +90,6 @@ html,body{
         color: #fff;
         opacity: 1;
     }
-    
     100%{
         font-family: "silk serif";
         -webkit-text-stroke: 1px #fff;
@@ -82,9 +97,13 @@ html,body{
         opacity: 0;
     }
 }
+
 #main{
     position: relative;
 }
+
+/* Page 1 */
+
 #page1{
     height: 100vh;
     width: 100%;
@@ -105,7 +124,7 @@ html,body{
 #nav-left p{
     width: 4vw;
     font-size: 1vw;
-    margin-left: 10vw;
+    margin-left: 15vw;
     margin-top: 2vw;
     font-weight: 500;
 }
@@ -121,7 +140,7 @@ html,body{
     height: fit-content;
     width: fit-content;
     position: relative;
-    top: 6.5vw;
+    top: 5.5vw;
     display: flex;
     transform: translate(-50%);
     left: 50%;
@@ -162,7 +181,7 @@ html,body{
     align-items: center;
 }
 #hero3 h1{
-    text-decoration: underline;
+    border-bottom: 0.7vw solid white;
 }
 #hero3 #slace{
     font-size: 8vw;
@@ -171,19 +190,350 @@ html,body{
     font-size: 8vw;
     font-weight: 500;
     text-transform: uppercase;
-    text-decoration: underline;
+    border-bottom: 0.7vw solid white;
 }
 #hero3 h1:hover{
     font-family: "plain light";
     -webkit-text-stroke: 1px #fff;
     color: transparent;
-    text-decoration: none;
+    border-bottom-color: transparent;
     transition: all linear 0.2s;
 }
 #hero3 h2:hover{
     font-family: "plain light";
     -webkit-text-stroke: 1px #fff;
     color: transparent;
-    text-decoration: none;
+    border-bottom-color: transparent;
     transition: all linear 0.2s;
 }
+
+
+/* Page 2*/
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    background-color: #151515;
+    position: relative;
+}
+#page2 #video-div{
+    height: 73vh;
+    width: 70vw;
+    position: relative; 
+    left: 31%;
+    background-image: url('https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg');
+    object-fit: cover;
+}
+#video-div img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+#video-div video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    }
+#page2 #video-cursor{
+        position: absolute;
+        transform: translate(-12%,-25%);
+        top: 0;
+        right: 13%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 11vw;
+        width: 11vw;
+        border-radius: 50%;
+        background-color: #e7912e;
+        z-index: 9;
+    }
+#video-cursor img{
+    position: absolute;
+    top: 33%;
+    transform: translate(-50%,50%);
+    left: 50%;
+    align-self: center;
+    height: 1.7vw;
+    width: 1.7vw;
+}
+
+/*  Page 3 */
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #4b4b4bc4; */
+    background-color: #151515;
+}
+
+/*  Page 4 */
+#page4{
+    min-height: 270vh;
+    /* min-height: 100vh; */
+    width: 100%;
+    background-color: #151515;
+}
+#page4 #content-container{
+    height: 70vh;
+    width: 60vw;
+    margin-left: 30vw;
+}
+#page4 #head{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+#head h1{
+    text-transform: uppercase;
+    font-family: "plain light";
+    font-size: 7vw;
+    position: relative;
+    transform: translate(-50%);
+    left: 20%;
+}
+#head h2{
+    font-family: "silk serif";
+    position: relative;
+    font-size: 4vw;
+    font-weight: 500;
+    transform: translate(-50%);
+    right: 25%;
+}
+#page4 #line{
+    height: 0.1vw;
+    width: 100%;
+    background-color: #aeaeae;
+    position: relative;
+    transform: translate(-50%);
+    left: 51.1%;
+    top: 5vw;
+}
+#page4 #belowLinePara{
+    font-family: "plain light";
+    width: 40vw;
+    font-size: 2.5vw;
+    position: relative;
+    top: 9vw;
+    left: 0.55vw;
+}
+#page4 #mid-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 13vw;
+}
+#mid-img img{
+    height: 40vw;
+    width: 30vw;
+    position: relative;
+    left: 0.6vw;
+}
+#mid-contentRight{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 2.5vw;
+}
+#mid-contentRight p{
+    font-family: "plain light";
+    font-size: 16px;
+    width: 19vw;
+}
+#mid-contentRight p:nth-child(2){
+    margin-top: 1.4vw;
+}
+#page4 #awards{
+    position: relative;
+    height: 43vw;
+    width: 35vw;
+    background-color: #3F7DF4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 36%;
+    top: 5vw;
+}
+.block{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 0.5vw;
+    height: 1vw;
+}
+.block-title{
+    font-family: "plain light";
+    align-self: center;
+    margin-left: 4.1vw;
+}
+.block-title h1{
+    font-size: 25px;
+    width: 14vw;
+    font-weight: 500;
+}
+.block-title-des{
+    font-family: "plain light";
+    margin-right: 3.5vw;
+    position: relative;
+}
+.block-title-des h2{
+    font-size: 15px;
+    width: 10vw;
+    font-weight: 500;
+}
+.below-line{
+    position: relative;
+    height: 0.05vw;
+    width: 75%;
+    background-color: #ffffff;
+    transform: translate(-50%);
+    left: 50%;
+}
+#below-awward-sec-line{
+    position: relative;
+    height: 0.05vw;
+    width: 63vw;
+    background-color: #ffffff;
+    top: 15vw;
+    left: 0.6vw;
+}
+#below-sec-line-text{
+    position: relative;
+    top: 16.5vw;
+    font-size: 15px;
+    font-family: "plain light";
+    left: 0.6vw;
+}
+
+
+
+
+/*  Page 5 */
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+}
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.elem h1{
+    font-size: 7vw;
+    font-weight: 100;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    font-family: 'plain light';
+    animation-name: textMove;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    text-transform: uppercase;
+    
+}
+.elem #textRightMove{
+    animation-direction: reverse;
+}
+@keyframes textMove {
+    from{
+        transform: translateX(0%);
+}
+to{ 
+        transform: translateX(calc(-100% - 20px));
+}
+}
+
+
+/*  Page 6 */
+#page6{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #212121; */
+    background-color: #151515;
+    position: relative;
+}
+#page6 #head-lastPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin-left: 20vw;
+}
+#page6 h1{
+    text-align: center;
+    font-size: 7.5vw;
+    font-family: "plain";
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#head-lastPage .entry-title__arrow{
+    position: relative;
+    height: 7vw;
+    width: 7vw;
+}
+#under-line{
+    position: relative;
+    width: 63vw;
+    height: 0.1vw;
+    transform: translate(-50%);
+    left: 61.8%;
+    top: 5vw;
+    background-color: #fff;
+}
+#obys-info{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform: translate(-50%);
+    left: 60.3%;
+    text-align: left;
+    gap: 12vw;
+    top: 10vw;
+}
+#left-side h4{
+    margin-bottom: 2vw;
+}
+#left-side h2{
+    font-weight: 500;
+}
+#mid h4{
+    margin-bottom: 2vw;
+}
+#mid h2{
+    width: 15vw;
+    font-weight: 500;
+}
+#right-side h4{
+    margin-bottom: 2vw;
+}
+#right-side h2{
+    font-weight: 500;
+}
+#footerAbove-line{
+    position: relative;
+    width: 63vw;
+    height: 0.1vw;
+    transform: translate(-50%);
+    left: 61.8%;
+    top: 17vw;
+    background-color: #fff;
+}
+#footer{
+    text-align: center;
+    position: relative;
+    transform: translate(-50%);
+    left: 35.5%;
+    top: 19vw;
+}
+#footer h2{
+    font-weight: 500;
+    font-family: 'plain light';
+    font-size: 16px;
+}
+
+

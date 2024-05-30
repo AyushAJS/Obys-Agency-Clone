@@ -29,6 +29,18 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 }
 
+// Cursor
+function cursor(){
+document.addEventListener("mousemove", function(e){
+  // console.log(e.clientX);  isse mouse ki location milegi x coordinate wali jab bhi mouse ko move kerenge.
+  gsap.to("#cursor",{
+      left: e.clientX,
+      top: e.clientY
+  })
+})
+}
+cursor();
+
 var tl = gsap.timeline()
 
 // Loader
@@ -77,6 +89,31 @@ tl.from(".heroContainer #heroNumPart h3,#heroBox #hero1 h1,#heroBox #hero2 h1,#h
   duration: 0.5,
 })
 
+// var crsr = document.querySelector("#cursor")
+// var navText = document.querySelector(".navText");
+// crsr.addEventListener("mouseover",{
+//   navText.style.height = '3vw',
+//   navText.style.width = '3vw'
+// })
+
+
 
 
 // loadingAnimation();
+
+
+
+
+
+
+//    Page 4 Animations
+
+gsap.from("#page4 #head h1",{
+  y: 100,
+  opacity: 0,
+  duration: 0.5
+})
+gsap.from("#page4 #line",{
+  x: 100,
+  duration: 0.7
+})
