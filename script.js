@@ -1,3 +1,4 @@
+
 function locomotiveScroll(){
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +30,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 }
 
+
 // Cursor
 function cursor(){
 document.addEventListener("mousemove", function(e){
@@ -39,10 +41,8 @@ document.addEventListener("mousemove", function(e){
   })
 })
 }
-cursor();
 
 var tl = gsap.timeline()
-
 // Loader
 function loadingAnimation(){
     tl.from(".line h1",{
@@ -82,38 +82,21 @@ function loadingAnimation(){
     })   
 }
 //  Page 1 Content
-tl.from(".heroContainer #heroNumPart h3,#heroBox #hero1 h1,#heroBox #hero2 h1,#heroBox #hero3 h1,#heroBox #hero4 h1",{
+tl.from(".heroContainer #heroBox #hero1 h1,#heroBox #hero2 h1,#heroBox #hero3 h1,#hero3 h2,#slace,#heroBox #hero4 h1",{
   y:100,
   opacity: 0,
   stagger: 0.1,
   duration: 0.5,
 })
-
-// var crsr = document.querySelector("#cursor")
-// var navText = document.querySelector(".navText");
-// crsr.addEventListener("mouseover",{
-//   navText.style.height = '3vw',
-//   navText.style.width = '3vw'
-// })
-
-
-
-
 // loadingAnimation();
+// cursor();  
+locomotiveScroll();
 
-
-
-
-
-
-//    Page 4 Animations
-
-gsap.from("#page4 #head h1",{
-  y: 100,
-  opacity: 0,
-  duration: 0.5
-})
-gsap.from("#page4 #line",{
-  x: 100,
-  duration: 0.7
-})
+function sheryAnime(){
+  Shery.imageEffect(".img-div",{
+    style: 5,
+    config: {"a":{"value":1.37,"range":[0,30]},"b":{"value":-0.88,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7272587797525699},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":4.1,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":false},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0.76,"range":[0,10]},"metaball":{"value":0.5,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.31,"range":[0,2]},"noise_scale":{"value":9.92,"range":[0,100]}},
+    gooey: true
+  })
+}
+sheryAnime()
