@@ -264,7 +264,7 @@ body::-webkit-scrollbar {
 
 /*  Page 3 */
 #page3{
-    min-height: 290vh;
+    min-height: 450vh;
     width: 100%;
     position: relative;
     background-color: #151515;
@@ -305,7 +305,7 @@ body::-webkit-scrollbar {
     background-color: #e0e0e0;
 }
 #img-container-page3{
-    background-color: #3F7DF4;
+    /* background-color: #3F7DF4; */
     padding: 1vw; 
     position: relative;
     top: 15vw;
@@ -314,6 +314,58 @@ body::-webkit-scrollbar {
     justify-content: flex-start;
     flex-wrap: wrap;
 } 
+.img-div{
+    height: 33vw;
+    width: 24vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.first-img-div{
+    position: relative;
+    right: 0.9vw;
+}
+.sec-img-div{
+    position: relative;
+    height: 40vw;
+    width: 32vw;
+    top: 5vw;
+    left: 1.5vw;
+    margin-right: 8vw;
+}
+.third-img-div{
+    height: 40vw;
+    width: 30vw;
+    top: 27vw;
+    left: 1.9vw;
+}
+.fourth-img-div{
+    position: relative;
+    height: 40vw;
+    width: 32vw;
+    top: 20vw;
+    left: 4vw;
+}
+.fifth-img-div{
+    position: relative;
+    height: 30vw;
+    width: 23vw;
+    top: 17vw;
+    right: 0.9vw;
+}
+.sixth-img-div{
+    position: relative;
+    height: 40vw;
+    width: 32vw;
+    top: 40vw;
+    left: 9.5vw;
+}
+.img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .circle-page3{
     height: 20vw;
     width: 20vw;
@@ -322,6 +374,21 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.first-circle{
+    position: relative;
+    top: 12vw;
+}
+.sec-circle{
+    position: relative;
+    bottom: 3vw;
+    margin-right: 2.5vw;
+}
+.third-circle{
+    position: relative;
+    margin-left: 4vw;
+    top: 45vw;
+    left: 8vw;
 }
 .circle-page3 svg{
     height: 7vw;
@@ -333,20 +400,6 @@ body::-webkit-scrollbar {
 .sec-circle svg{
     rotate: 45deg;
 }
-.img-div{
-    height: 33vw;
-    width: 24vw;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-.img-div img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
 
 
 
